@@ -42,6 +42,11 @@
 						C17.9,1.2,18,1.1,18,0.9c0-0.2,0-0.3-0.1-0.5c-0.1-0.1-0.2-0.3-0.3-0.3C17.4,0,17.3,0,17.1,0H0.9C0.7,0,0.6,0,0.4,0.1
 						S0.2,0.3,0.1,0.5C0,0.6,0,0.8,0,0.9c0,0.2,0.1,0.3,0.2,0.4L8.3,12.6z" />
 					</svg>
+					<div class="deroul-list">
+						<a href="" class="header-link">ENTRAÎNEMENTS</a>
+						<a href="" class="header-link">CALENDRIER</a>
+						<a href="" class="header-link">ACTUALITÉS</a>
+					</div>
 				</div>
 				<a href="" class="header-link">GALERIE</a>
 				<a href="" class="header-link">CONTACT</a>
