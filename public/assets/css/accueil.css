@@ -1,0 +1,386 @@
+/******************************
+*******************************
+          BANNIERE
+*******************************
+******************************/
+
+#banniere {
+  background-image: url(../img/BANNIERE.png);
+  width: 100%;
+  height: 400px;
+  margin-top: 110px;
+}
+
+/******************************
+  *******************************
+            MAIN
+  *******************************
+  ******************************/
+
+main {
+  margin-top: 80px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main div#container {
+  display: flex;
+}
+
+main div.introduction {
+  width: 65%;
+}
+
+h1 {
+  font-family: var(--destroy);
+  font-size: 12rem;
+  width: auto;
+  color: var(--main);
+  font-weight: 400;
+}
+
+p.officiel {
+  font-size: 1.8rem;
+}
+
+p.sous-titre {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 59px;
+  color: var(--secondary);
+}
+
+span.ultimate {
+  text-decoration: underline;
+  text-decoration-color: var(--main);
+}
+
+p.description {
+  font-size: 1.8rem;
+  text-align: justify;
+  margin-top: 30px;
+}
+
+div.flex {
+  margin-top: 50px;
+  display: flex;
+}
+
+div.call-to-action {
+  width: 230px;
+  height: 65px;
+  background-color: var(--main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: 0.3s all ease;
+}
+
+div.call-to-action a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s all ease;
+}
+
+div.call-to-action:hover {
+  background-color: var(--secondary);
+}
+
+div.post {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+}
+
+a.dernier-post {
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-decoration-line: underline;
+  color: #000000;
+}
+
+div.image-squelette {
+  position: relative;
+  width: 35%;
+}
+
+div.image-squelette img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  right: -35%;
+}
+
+/******************************
+  *******************************
+            PRESENTATION DE L'ULTIMATE
+  *******************************
+  ******************************/
+
+#presentation h2.presentation {
+  font-weight: 600;
+  font-size: 3.6rem;
+  color: var(--secondary);
+  margin-top: 80px;
+}
+
+p.texte {
+  font-size: 1.8rem;
+  margin-top: 60px;
+}
+
+#terrain {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#terrain div {
+  margin-top: 20px;
+}
+
+.image-terrain:nth-child(1) {
+  background-image: url(../svg/terrain-herbe.svg);
+  width: 350px;
+  height: 165px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-terrain2 {
+  background-image: url(../svg/terrain-indoor.svg);
+  width: 350px;
+  height: 165px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-terrain3 {
+  background-image: url(../svg/terrain-plage.svg);
+  width: 350px;
+  height: 165px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p.nombre {
+  text-align: center;
+  color: white;
+  z-index: 1000;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+p.terrain {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
+/******************************
+  *******************************
+            VALEURS ULTIMATE FRISBEE
+  *******************************
+  ******************************/
+
+#valeurs h2.presentation {
+  font-weight: 600;
+  font-size: 3.6rem;
+  color: var(--secondary);
+  margin-top: 100px;
+}
+
+#bloc {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+div.image-et-titre {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+
+p.titre-valeur {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+p.description-valeur {
+  font-size: 1.8rem;
+  font-weight: 500;
+  width: 288px;
+}
+
+p.description-valeur4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  width: 330px;
+}
+
+p.description-valeur5 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  width: 330px;
+}
+
+div.mms {
+  margin-top: 30px;
+  width: 428px;
+  height: 456px;
+  background-color: var(--secondary);
+  border-radius: 10px;
+}
+
+div.mms img {
+  margin-top: -84px;
+}
+
+/******************************
+  *******************************
+            VOIR NOTRE GALERIE
+  *******************************
+  ******************************/
+
+#link-galerie {
+  width: 230px;
+  height: 65px;
+  background-color: var(--main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  border-radius: 10px;
+  transition: 0.3s all ease;
+}
+
+#link-galerie:hover {
+  background-color: var(--secondary);
+}
+
+#link-galerie a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/******************************
+  *******************************
+            BANNIERE STATISTIQUE
+  *******************************
+  ******************************/
+
+#banniere-stats {
+  margin-top: 60px;
+  height: 413px;
+  width: 100%;
+  background-color: var(--secondary);
+}
+
+h2.club {
+  font-size: 3.6rem;
+  font-weight: 600;
+  color: white;
+  margin-left: 10%;
+  padding-top: 30px;
+}
+
+#statistiques {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+#banniere-stats #statistiques p.chiffre {
+  font-size: 4.2rem;
+  font-weight: 600;
+}
+
+#banniere-stats #statistiques p.stat-info {
+  font-size: 2rem;
+}
+
+#banniere-stats #statistiques p.stat-info2 {
+  font-size: 2rem;
+  width: 178px;
+}
+
+div.image-stat {
+  display: flex;
+  align-items: center;
+}
+
+div.stat-description {
+  margin-left: 15px;
+}
+
+#link-rejoindre {
+  width: 230px;
+  height: 65px;
+  background-color: var(--main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  border-radius: 10px;
+}
+
+#link-rejoindre:hover a {
+  color: var(--secondary);
+}
+
+#link-rejoindre a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+  transition: 0.3s all ease;
+}
+
+/******************************
+  *******************************
+            FACEBOOK PLUGIN
+  *******************************
+  ******************************/
+
+#facebook {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+#facebook h2 {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  font-size: 3.6rem;
+  font-weight: 600;
+  color: var(--secondary);
+  padding-bottom: 20px;
+}

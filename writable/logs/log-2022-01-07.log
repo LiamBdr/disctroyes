@@ -1,0 +1,16 @@
+CRITICAL - 2022-01-07 10:17:19 --> Class 'App\Models\InfosModel' not found
+#0 /Applications/MAMP/htdocs/disctroyes/system/CodeIgniter.php(825): App\Controllers\Index->index()
+#1 /Applications/MAMP/htdocs/disctroyes/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Index))
+#2 /Applications/MAMP/htdocs/disctroyes/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /Applications/MAMP/htdocs/disctroyes/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-01-07 17:25:15 --> syntax error, unexpected '*'
+#0 /Applications/MAMP/htdocs/disctroyes/system/Autoloader/Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('/Applications/M...')
+#1 /Applications/MAMP/htdocs/disctroyes/system/Autoloader/Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 /Applications/MAMP/htdocs/disctroyes/system/CodeIgniter.php(790): class_exists('\\App\\Controller...', true)
+#5 /Applications/MAMP/htdocs/disctroyes/system/CodeIgniter.php(399): CodeIgniter\CodeIgniter->startController()
+#6 /Applications/MAMP/htdocs/disctroyes/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /Applications/MAMP/htdocs/disctroyes/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}

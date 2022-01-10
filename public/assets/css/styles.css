@@ -3,19 +3,6 @@
   src: url(../fonts/destroyx.ttf) format("truetype");
 }
 
-/*
- font-base: 62.5%; 
- font-h1: 6rem; 
- font-h2: 3rem; 
- font-h3: 4rem;
- font-xxl: 2.4rem; 
- font-xl: 1.8rem; 
- font-l: 1.6rem; 
- font-m: 1.4rem; 
- font-s: 1.1rem; 
- font-xs: 0.9rem; 
- */
-
 :root {
   --main: #c11717;
   --main-variant: #a81414;
@@ -35,20 +22,12 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   position: relative;
   min-height: 120vh;
-}
-
-h1 {
-  font-family: var(--destroy);
-  font-size: 10rem;
-  width: auto;
-  text-align: center;
-  color: var(--main);
-  font-weight: 400;
 }
 
 /******************************
@@ -69,12 +48,20 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
-  margin-bottom: 130px;
 
   background: rgba(255, 255, 255, 0.33);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.3));
+  transition: all ease 0.3s;
+}
+
+.nav-responsive {
+  display: none;
+}
+
+header .header-responsive {
+  display: none;
 }
 
 header .header-nav {
@@ -100,9 +87,12 @@ header .header-nav {
   position: relative;
   color: var(--secondary);
   text-decoration: none;
-  margin: 0 2vw;
+  margin: 0 1.5vw;
   font-size: 1.8rem;
   font-weight: 600;
+  z-index: 10;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .header-nav nav .header-link:not(.activ):after {
@@ -128,59 +118,728 @@ header .header-nav {
 /******* MENU DÉROULANT ******/
 
 .header-nav nav .header-deroul {
+  position: relative;
   display: flex;
   align-items: center;
   margin: 0 30px;
   cursor: pointer;
 }
 
-.header-nav .header-deroul a {
+.header-nav .header-deroul p {
   position: relative;
   color: var(--secondary);
-  text-decoration: none;
   font-size: 1.8rem;
   font-weight: 600;
   margin-left: 0;
   margin-right: 10px;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .header-deroul svg {
   height: 1.3rem;
   fill: var(--secondary);
+  transform: rotate(0);
+  transition: all ease 0.3s;
+}
+
+.header-deroul.activ svg {
+  fill: var(--main);
+}
+
+.header-deroul.activ p {
+  color: var(--main);
+  font-weight: 700;
+}
+
+.header-deroul .deroul-list {
+  position: absolute;
+  top: -200px;
+  left: -1%;
+  width: 102%;
+  height: auto;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--secondary);
+
+  opacity: 0;
+  transition: all ease 0.3s;
+  z-index: 0;
+}
+
+.header-nav nav .deroul-list .header-link {
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: white;
+  margin: 5px 0;
+}
+
+.header-nav nav .deroul-list .header-link::after {
+  background: white;
+  height: 1px;
+}
+
+.header-nav nav .deroul-list .header-link.activ {
+  font-weight: 500;
+}
+
+.header-deroul svg.open {
+  transform: rotate(180deg);
+}
+
+.header-deroul .deroul-list.open {
+  opacity: 1;
+  top: 130%;
 }
 
 /******* HEADER RECHERCHE ******/
 
 .header-search {
   position: relative;
-  width: auto;
+  width: 15%;
   display: flex;
   align-items: center;
 }
 
 .header-search svg {
+  min-height: 2.5rem;
   height: 2.5rem;
   margin-right: 1vw;
   fill: var(--secondary);
 }
 
 .header-search input {
+  position: relative;
   overflow: hidden;
   outline: none;
-  font-family: var(--montserrat);
   font-weight: 500;
   padding: 3px 5px;
   border-radius: 10px;
   border: 2px solid var(--secondary);
   background: transparent;
+  width: 80%;
 }
 
 /******************************
+*******************************
+          HORAIRES FIXED
+*******************************
+******************************/
+
+.horaires-fixed {
+  position: fixed;
+  right: -21vw;
+  bottom: 60%;
+
+  background: var(--secondary);
+  height: 50px;
+  width: 25vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px 0 0 30px;
+  padding: 10px;
+
+  z-index: 5;
+  transition: all ease 0.3s;
+}
+
+.horaires-fixed.open {
+  right: 0;
+}
+
+.horaires-fixed .horaires-button {
+  fill: white;
+  width: 10%;
+  height: auto;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.horaires-fixed .horaires-button:hover {
+  transform: scale(1.1);
+}
+
+.horaires-fixed > p {
+  color: white;
+  width: auto;
+  white-space: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-left: 13%;
+}
+
+.horaires-fixed .horaires-listes {
+  position: absolute;
+  top: 100%;
+  left: 16%;
+  height: auto;
+  width: 84%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 0 0 0 20px;
+  padding: 15px 20px;
+}
+
+.horaires-listes .horaires-creneau {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.horaires-listes ul {
+  list-style-position: inside;
+  padding-left: 15px;
+}
+
+.horaires-listes ul li {
+  position: relative;
+  color: white;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.horaires-listes ul li:nth-last-child(1) {
+  margin-bottom: 15px;
+}
+
+.horaires-listes ul li p:nth-child(1) {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 2px;
+}
+
+.horaires-listes ul li p:nth-child(2) {
+  padding-left: 15px;
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+
+.horaires-listes ul li .horaires-jour {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.horaires-listes ul li .horaires-heure {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/******************************
+  *******************************
+            BACK TO TOP
+  *******************************
+  ******************************/
+
+#back-to-top {
+  width: 50px;
+  height: 50px;
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  float: right;
+  margin-right: 15%;
+  margin-top: 30px;
+}
+
+/******************************
+*******************************
+          FOOTER
+*******************************
+******************************/
+
+footer {
+  margin-top: 100px;
+  width: 100%;
+  height: 321px;
+  background-color: var(--secondary);
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+div.gauche {
+  width: 33%;
+  height: 321px;
+}
+
+div.centre {
+  width: 33%;
+  height: 321px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.droite {
+  width: 33%;
+  height: 321px;
+}
+
+div.droite p.trouver {
+  font-size: 2rem;
+  margin-top: 45px;
+}
+
+div.bloc-google-maps {
+  width: 390px;
+  height: 186px;
+  margin-top: 25px;
+  border-radius: 10px;
+  display: flex;
+}
+
+div.bloc-adresse {
+  width: 132px;
+  height: 100%;
+  background-color: #2e2254;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+div.bloc-adresse p {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+div.bloc-adresse p:nth-child(1) {
+  padding-top: 50px;
+}
+
+div.bloc-adresse p:nth-child(2) {
+  padding-top: 15px;
+  font-weight: lighter;
+}
+
+div.bloc-adresse p:nth-child(3) {
+  font-weight: lighter;
+}
+
+div.google-maps {
+  width: 258px;
+  height: 186px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+div.google-maps iframe {
+  width: 258px;
+  height: 186px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+div.centre a {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 21px 0px;
+  transition: 0.3s all ease;
+}
+
+div.centre a:hover {
+  color: var(--main);
+}
+
+div.first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+div.two {
+  display: flex;
+  justify-content: space-between;
+  width: 190px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+div.two a img {
+  opacity: 0.85;
+}
+
+div.two a img:hover {
+  opacity: 1;
+}
+
+div.three {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: lighter;
+}
+
+.three p {
+  font-size: 1.5rem;
+}
+
+footer img.logo {
+  width: 94px;
+  height: 99px;
+}
+
+footer p.disctroyes {
+  font-size: 2.4rem;
+}
+
+@media screen and (max-width: 1200px) {
+  div.bloc-google-maps {
+    width: 340px;
+  }
+  div.google-maps {
+    width: 208px;
+  }
+  div.google-maps iframe {
+    width: 208px;
+    height: 186px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+/******************************
+****************************************************************************************************************************
+          LAPTOP RESPONSIVE
+****************************************************************************************************************************
+******************************/
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 55%;
+  }
+
+  /******************************
+  *******************************
+            HEADER
+  *******************************
+  ******************************/
+
+  header {
+    height: 80px;
+  }
+
+  header .header-nav {
+    display: none;
+  }
+
+  header .header-responsive {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  header .header-responsive img {
+    position: relative;
+    height: 80%;
+    margin-right: 3vw;
+  }
+
+  header .header-hamburger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    cursor: pointer;
+  }
+
+  /**** HAMBURGER ICON ******/
+
+  .header-hamburger span {
+    background: var(--secondary);
+    border-radius: 10px;
+    height: 3px;
+    margin: 5px 0;
+    transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+
+  .header-hamburger span:nth-of-type(1) {
+    width: 50%;
+  }
+
+  .header-hamburger span:nth-of-type(2) {
+    width: 100%;
+  }
+
+  .header-hamburger span:nth-of-type(3) {
+    width: 75%;
+  }
+
+  .header-hamburger input[type="checkbox"] {
+    display: none;
+  }
+
+  .header-hamburger input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+    transform-origin: bottom;
+    transform: rotatez(45deg) translate(7px, -1px);
+  }
+
+  .header-hamburger input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+    transform-origin: top;
+    transform: rotatez(-45deg);
+  }
+
+  .header-hamburger input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+    transform-origin: bottom;
+    width: 50%;
+    transform: translate(22px, -5px) rotatez(45deg);
+  }
+
+  /**** NAV RESPONSIVE ******/
+
+  .nav-responsive {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(10, 1, 39, 0.9);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transition: all ease 0.3s;
+    z-index: 10;
+  }
+
+  .nav-responsive .header-link {
+    color: white;
+    text-decoration: none;
+    margin: 2vh;
+    font-size: 2rem;
+    font-weight: 600;
+    transition: all ease 0.2s;
+  }
+
+  .nav-responsive .header-link:hover {
+    color: var(--main);
+  }
+
+  .nav-responsive.open {
+    left: 0;
+  }
+
+  .nav-responsive.open ~ header {
+    background: white;
+  }
+
+  .header-search {
+    width: 20%;
+  }
+
+  /******************************
+*******************************
+          HORAIRES FIXED
+*******************************
+******************************/
+
+  .horaires-fixed {
+    right: -25vw;
+    bottom: 60%;
+    width: 30vw;
+    height: 40px;
+  }
+
+  /******************************
 *******************************
           MAIN
 *******************************
 ******************************/
 
-main {
-  margin-top: 110px;
+  main {
+    margin-top: 80px;
+  }
+
+  /******************************
+*******************************
+          FOOTER
+*******************************
+******************************/
+
+  footer {
+    flex-wrap: wrap;
+    height: 600px;
+  }
+  div.gauche {
+    width: 50%;
+  }
+  div.centre {
+    width: 50%;
+  }
+  div.droite {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  div.droite p.trouver {
+    font-size: 2rem;
+    margin-top: 0px;
+  }
+}
+
+/******************************
+*******************************
+          LAPTOP TABLETTE
+*******************************
+******************************/
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+
+  header .header-hamburger {
+    width: 40px;
+  }
+
+  /**** HAMBURGER ICON ******/
+
+  .header-hamburger span {
+    height: 2px;
+    margin: 3px 0;
+  }
+
+  .header-hamburger input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+    transform: rotatez(45deg) translate(5px, -3px);
+  }
+
+  .header-hamburger input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+    transform: translate(18px, -2px) rotatez(45deg);
+  }
+
+  /******************************
+*******************************
+          HORAIRES FIXED
+*******************************
+******************************/
+
+  .horaires-fixed {
+    width: 60vw;
+    right: -51vw;
+  }
+
+  .horaires-fixed .horaires-listes {
+    left: 17%;
+  }
+
+  .horaires-fixed .horaires-listes {
+    padding: 10px 15px;
+  }
+
+  .horaires-listes .horaires-creneau {
+    margin-bottom: 5px;
+  }
+
+  .horaires-listes ul li {
+    margin-bottom: 5px;
+  }
+
+  /******************************
+*******************************
+          FOOTER
+*******************************
+******************************/
+
+  footer {
+    height: 1000px;
+  }
+  div.gauche {
+    width: 100%;
+    height: 250px;
+  }
+  div.centre {
+    width: 100%;
+    height: 250px;
+  }
+  div.centre a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin: 15px 0px;
+    transition: 0.3s all ease;
+  }
+}
+
+/******************************
+*******************************
+          LAPTOP PORTABLE
+*******************************
+******************************/
+
+@media screen and (max-width: 480px) {
+  /******************************
+  *******************************
+            HEADER
+  *******************************
+  ******************************/
+
+  header {
+    height: 60px;
+  }
+
+  .nav-responsive {
+    padding-top: 60px;
+  }
+
+  .header-search {
+    width: 30%;
+  }
+
+  /******************************
+*******************************
+          MAIN
+*******************************
+******************************/
+
+  main {
+    margin-top: 60px;
+  }
+
+  /******************************
+*******************************
+          FOOTER
+*******************************
+******************************/
+
+  div.bloc-google-maps {
+    width: 320px;
+  }
+  div.google-maps {
+    width: 188px;
+  }
+  div.google-maps iframe {
+    width: 188px;
+    height: 186px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 }

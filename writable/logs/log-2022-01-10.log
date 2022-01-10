@@ -1,0 +1,132 @@
+CRITICAL - 2022-01-10 02:42:22 --> include(&lt;!-- DEBUG-VIEW START 1 APPPATH/Views/common/header.php --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;fr&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+
+    &lt;title&gt;Disctroy(es) | Accueil&lt;/title&gt;
+    &lt;!--META--&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;Site officiel de l'association DiscTroy(es), club d'Ultimate Frisbee à Troyes.&quot; /&gt;
+    &lt;meta name=&quot;keywords&quot; content=&quot;frisbee, ultimate frisbee, association ultimate, frisbee Troyes&quot;&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;CURFS Fabien, BOUDRAA Liam, GUERTIN Mathis, GRENIER Mattis&quot;&gt;
+
+    &lt;!--FAVICON--&gt;
+    &lt;!---&lt;link rel=&quot;icon&quot; href=&quot;assets/favicon/favicon.ico&quot; sizes=&quot;any&quot;&gt;----&gt;
+    &lt;link rel=&quot;icon&quot; href=&quot;http://...@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+    &lt;!--CSS--&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;http://localhost:8888/disctroyes/public/assets/css/styles.css&quot; type=&quot;text/css&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+    &lt;script async defer crossorigin=&quot;anonymous&quot; src=&quot;https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&amp;version=v12.0&quot; nonce=&quot;5hwBZEzq&quot;&gt;&lt;/script&gt;
+
+    &lt;nav class=&quot;nav-responsive&quot;&gt;
+        &lt;a href=&quot;&quot; class=&quot;header-link activ&quot;&gt;ACCUEIL&lt;/a&gt;
+        &lt;a href=&quot;&quot; class=&quot;header-link&quot;&gt;ACTUALITÉS&lt;/a&gt;
+        &lt;a href=&quot;&quot; class=&quot;header-link&quot;&gt;ENTRAÎNEMENTS&lt;/a&gt;
+        &lt;a href=&quot;&quot; class=&quot;header-link&quot;&gt;CALENDRIER&lt;/a&gt;
+        &lt;a href=&quot;&quot; class=&quot;header-link&quot;&gt;ACTUALITÉS&lt;/a&gt;
+        &lt;a href=&quot;&quot; class=&quot;header-link&quot;&gt;GALERIE&lt;/a&gt;
+        &lt;a href=&quot;&quot; class=&quot;header-link&quot;&gt;CONTACT&lt;/a&gt;
+    &lt;/nav&gt;
+
+    &lt;header&gt;
+
+        &lt;div class=&quot;header-responsive&quot;&gt;
+            &lt;img src=&quot;http://localhost:8888/disctroyes/public/assets/svg/logo-black.svg&quot; alt=&quot;Logo DiscTroy(es) noir&quot;&gt;
+
+            &lt;label class=&quot;header-hamburger&quot; for=&quot;check&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;check&quot; /&gt;
+                &lt;span&gt;&lt;/span&gt;
+                &lt;span&gt;&lt;/span&gt;
+                &lt;span&gt;&lt;/span&gt;
+            &lt;/label&gt;
+        &lt;/div&gt;
+
+
+        &lt;div class=&quot;header-nav&quot;&gt;
+
+            &lt;img src=&quot;http://localhost:8888/disctroyes/public/assets/svg/logo-black.svg&quot; alt=&quot;Logo DiscTroy(es) noir&quot;&gt;
+            &lt;nav&gt;
+                &lt;a href=&quot;&quot; class=&quot;header-link activ&quot;&gt;ACCUEIL&lt;/a&gt;
+                &lt;a href=&quot;&quot; class=&quot;header-link&quot;&gt;ACTUALITÉS&lt;/a&gt;
+                &lt;div class=&quot;header-deroul&quot;&gt;
+                    &lt;p&gt;INFORMATIONS&lt;/p&gt;
+                    &lt;svg x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 18 13&quot; xml:space=&quot;preserve&quot;&gt;
+                        &lt;path d=&quot;M8.3,12.6c0.1,0.1,0.2,0.2,0.3,0.3C8.7,13,8.9,13,9,13c0.1,0,0.3,0,0.4-0.1c0.1-0.1,0.2-0.2,0.3-0.3l8.1-11.3
+						C17.9,1.2,18,1.1,18,0.9c0-0.2,0-0.3-0.1-0.5c-0.1-0.1-0.2-0.3-0.3-0.3C17.4,0,17.3,0,17.1,0H0.9C0.7,0,0.6,0,0.4,0.1
+						S0.2,0.3,0.1,0.5C0,0.6,0,0.8,0,0.9c0,0.2,0.1,0.3,0.2,0.4L8.3,12.6z&quot; /&gt;
+                    &lt;/svg&gt;
+                    &lt;div class=&quot;deroul-list&quot;&gt;
+                        &lt;a href=&quot;&quot; class=&quot;header-link&quot;&gt;ENTRAÎNEMENTS&lt;/a&gt;
+                        &lt;a href=&quot;&quot; class=&quot;header-link&quot;&gt;CALENDRIER&lt;/a&gt;
+                        &lt;a href=&quot;&quot; class=&quot;header-link&quot;&gt;ACTUALITÉS&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;a href=&quot;&quot; class=&quot;header-link&quot;&gt;GALERIE&lt;/a&gt;
+                &lt;a href=&quot;&quot; class=&quot;header-link&quot;&gt;CONTACT&lt;/a&gt;
+            &lt;/nav&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class=&quot;header-search&quot;&gt;
+            &lt;svg viewBox=&quot;0 0 33 32&quot;&gt;
+                &lt;path d=&quot;M29.4732 25.1424C28.6623 24.3893 27.8731 23.6145 27.1064 22.819C26.4623 22.1845 26.0745 21.7228 26.0745 21.7228L21.2267 19.4783C23.1675 17.3441 24.2387 14.5966 24.2392 11.7511C24.2392 5.2729 18.8027 0 12.1196 0C5.43652 0 0 5.2729 0 11.7511C0 18.2294 5.43652 23.5023 12.1196 23.5023C15.172 23.5023 17.9544 22.3943 20.0891 20.5829L22.404 25.2834C22.404 25.2834 22.8801 25.6594 23.5346 26.2839C24.2046 26.8933 25.0859 27.7176 25.9308 28.5787L28.282 30.9155L29.3278 32L33 28.4394L31.8815 27.4255C31.2253 26.801 30.3493 25.9717 29.4732 25.1424ZM12.1196 20.1448C7.34622 20.1448 3.46275 16.3794 3.46275 11.7511C3.46275 7.12286 7.34622 3.35747 12.1196 3.35747C16.893 3.35747 20.7765 7.12286 20.7765 11.7511C20.7765 16.3794 16.893 20.1448 12.1196 20.1448Z&quot; /&gt;
+            &lt;/svg&gt;
+            &lt;input type=&quot;text&quot;&gt;&lt;/input&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;aside class=&quot;horaires-fixed&quot;&gt;
+        &lt;svg class=&quot;horaires-button&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 51 46&quot; xml:space=&quot;preserve&quot;&gt;
+            &lt;path d=&quot;M42.4,32.5h-3.3c-0.3,0-0.6,0.2-0.8,0.5c-0.7,1.2-1.6,2.3-2.6,3.3c-1.7,1.7-3.7,3.1-5.9,4
+			c-2.3,1-4.7,1.5-7.2,1.5c-2.5,0-4.9-0.5-7.2-1.5c-2.2-0.9-4.2-2.3-5.9-4c-1.7-1.7-3-3.7-4-6c-1-2.3-1.4-4.8-1.4-7.3
+			c0-2.5,0.5-5,1.4-7.3c0.9-2.2,2.3-4.2,4-6c1.7-1.7,3.7-3.1,5.9-4c2.3-1,4.7-1.5,7.2-1.5c2.5,0,4.9,0.5,7.2,1.5C32,6.7,34,8,35.7,9.7
+			c1,1,1.8,2.1,2.6,3.3c0.2,0.3,0.5,0.5,0.8,0.5h3.3c0.4,0,0.7-0.4,0.5-0.8C39.1,5.1,31.5,0.1,22.9,0C10.4-0.2,0,10.2,0,23
+			c0,12.7,10.1,23,22.6,23c8.7,0,16.4-5,20.2-12.7C43.1,32.9,42.8,32.5,42.4,32.5z&quot; /&gt;
+            &lt;path d=&quot;M50.5,17.1H35.7c-0.3,0-0.5,0.2-0.5,0.5v2.8c0,0.3,0.2,0.5,0.5,0.5h14.8c0.3,0,0.5-0.2,0.5-0.5v-2.8
+			C51,17.3,50.8,17.1,50.5,17.1z M42.8,25.1h-7.1c-0.3,0-0.5,0.2-0.5,0.5v2.8c0,0.3,0.2,0.5,0.5,0.5h7.1c0.3,0,0.5-0.2,0.5-0.5v-2.8
+			C43.2,25.3,43,25.1,42.8,25.1z M23.5,11.8H21c-0.4,0-0.6,0.3-0.6,0.7v14.6c0,0.2,0.1,0.4,0.3,0.5l8.6,6.4c0.3,0.2,0.7,0.2,0.9-0.1
+			l1.5-2.1v0c0.2-0.3,0.1-0.7-0.1-0.9l-7.3-5.4v-13C24.1,12.1,23.8,11.8,23.5,11.8z&quot; /&gt;
+        &lt;/svg&gt;
+
+        &lt;p&gt;HORAIRES ENTRAÎNEMENTS&lt;/p&gt;
+
+        &lt;div class=&quot;horaires-listes&quot;&gt;
+            &lt;p class=&quot;horaires-creneau&quot;&gt;Adultes et Jeunes U17/U20 :&lt;/p&gt;
+
+            &lt;ul&gt;
+                &lt;li&gt;&lt;p&gt;&lt;span class=&quot;horaires-jour&quot;&gt;MARDI&lt;/span&gt; | &lt;span class=&quot;horaires-heure&quot;&gt;18h30-21h&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Stade Des Sénardes &lt;span class=&quot;horaires-type&quot;&gt;(EXT)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span class=&quot;horaires-jour&quot;&gt;JEUDI&lt;/span&gt; | &lt;span class=&quot;horaires-heure&quot;&gt;20h-22h&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Gymnase René Lacoste &lt;span class=&quot;horaires-type&quot;&gt;(INT)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span class=&quot;horaires-jour&quot;&gt;SAMEDI&lt;/span&gt; | &lt;span class=&quot;horaires-heure&quot;&gt;16h-18h&lt;/span&gt;&lt;/p&gt;&lt;p&gt;COSEC Des Sénardes &lt;span class=&quot;horaires-type&quot;&gt;(INT)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;            &lt;/ul&gt;
+
+            &lt;p class=&quot;horaires-creneau&quot;&gt;Jeunes (à partir de 10 ans) :&lt;/p&gt;
+
+            &lt;ul&gt;
+                &lt;li&gt;&lt;p&gt;&lt;span class=&quot;horaires-jour&quot;&gt;SAMEDI&lt;/span&gt; | &lt;span class=&quot;horaires-heure&quot;&gt;10h-12h&lt;/span&gt;&lt;/p&gt;&lt;p&gt;COSEC Des Sénardes &lt;span class=&quot;horaires-type&quot;&gt;(INT)&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;            &lt;/ul&gt;
+
+        &lt;/div&gt;
+    &lt;/aside&gt;
+&lt;!-- DEBUG-VIEW ENDED 1 APPPATH/Views/common/header.php --&gt;
+): failed to open stream: Invalid argument
+#0 /Applications/MAMP/htdocs/disctroyes/app/Controllers/Index.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(&lt;!--...', '/Applications/M...', 30, Array)
+#1 /Applications/MAMP/htdocs/disctroyes/app/Controllers/Index.php(30): include()
+#2 /Applications/MAMP/htdocs/disctroyes/system/CodeIgniter.php(825): App\Controllers\Index->index()
+#3 /Applications/MAMP/htdocs/disctroyes/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Index))
+#4 /Applications/MAMP/htdocs/disctroyes/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /Applications/MAMP/htdocs/disctroyes/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-01-10 03:00:58 --> Undefined variable: nav
+#0 /Applications/MAMP/htdocs/disctroyes/app/Views/common/header.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/Applications/M...', 60, Array)
+#1 /Applications/MAMP/htdocs/disctroyes/system/View/View.php(210): include('/Applications/M...')
+#2 /Applications/MAMP/htdocs/disctroyes/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Applications/MAMP/htdocs/disctroyes/system/Common.php(1089): CodeIgniter\View\View->render('common/header', Array, true)
+#4 /Applications/MAMP/htdocs/disctroyes/app/Controllers/Index.php(34): view('common/header', Array)
+#5 /Applications/MAMP/htdocs/disctroyes/system/CodeIgniter.php(825): App\Controllers\Index->index()
+#6 /Applications/MAMP/htdocs/disctroyes/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Index))
+#7 /Applications/MAMP/htdocs/disctroyes/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/MAMP/htdocs/disctroyes/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
