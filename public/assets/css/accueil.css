@@ -6,6 +6,7 @@
 
 #banniere {
   background-image: url(../img/BANNIERE.png);
+  background-position: center;
   width: 100%;
   height: 400px;
   margin-top: 110px;
@@ -65,6 +66,11 @@ p.description {
 }
 
 div.flex {
+  margin-top: 50px;
+  display: flex;
+}
+
+div.flexbase {
   margin-top: 50px;
   display: flex;
 }
@@ -140,7 +146,9 @@ p.texte {
 #terrain {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 #terrain div {
@@ -307,11 +315,12 @@ h2.club {
   margin-right: auto;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 #banniere-stats #statistiques p.chiffre {
-  font-size: 4.2rem;
+  font-size: 3.9rem;
   font-weight: 600;
 }
 
@@ -366,7 +375,7 @@ div.stat-description {
 
 #facebook {
   position: relative;
-  width: 80%;
+  width: 50%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -383,4 +392,151 @@ div.stat-description {
   font-weight: 600;
   color: var(--secondary);
   padding-bottom: 20px;
+}
+
+/******************************
+*******************************
+          RESPONSIVE DESIGN PAGE ACCUEIL MEDIA SCREEN
+*******************************
+******************************/
+
+@media screen and (max-width: 1350px) {
+  div.mms {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  div.mms {
+    display: none;
+  }
+
+  #banniere {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  main #container {
+    flex-direction: column;
+  }
+  main div.introduction {
+    width: 100%;
+  }
+
+  div.image-squelette img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    right: 0%;
+  }
+  div.image-squelette {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    margin-top: 50px;
+  }
+  #banniere-stats {
+    height: 500px;
+  }
+
+  #facebook {
+    width: 90%;
+  }
+
+  #facebook .fb-page {
+    position: relative;
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #bloc {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  div.image-et-titre {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  div.flexbase {
+    flex-direction: column;
+  }
+  div.call-to-action {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  div.post {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 533px) {
+  #banniere-stats {
+    height: 650px;
+  }
+}
+
+@media screen and (max-width: 469px) {
+  #banniere {
+    margin-top: 60px;
+  }
+
+  #banniere-stats {
+    height: 750px;
+  }
+  h1 {
+    font-family: var(--destroy);
+    font-size: 8rem;
+    width: auto;
+    color: var(--main);
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .image-terrain:nth-child(1) {
+    background-image: url(../svg/terrain-herbe.svg);
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+  }
+
+  .image-terrain2 {
+    background-image: url(../svg/terrain-indoor.svg);
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+  }
+
+  .image-terrain3 {
+    background-image: url(../svg/terrain-plage.svg);
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+  }
 }

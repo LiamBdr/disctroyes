@@ -9,7 +9,7 @@
 			<h1>DISCTROYES</h1>
 			<p class="sous-titre"><span class="ultimate">Ultimate</span> Frisbee</p>
 			<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate nulla massa urna dignissim sed tristique volutpat. Pretium dui nascetur blandit facilisis sit. Purus fringilla donec at ultrices aliquam. Donec mauris vitae purus, elementum. </p>
-			<div class="flex">
+			<div class="flexbase">
 				<div class="call-to-action">
 					<a href="">Découvrez nous !</a>
 				</div>
