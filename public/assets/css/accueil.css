@@ -177,7 +177,7 @@ p.texte {
 p.nombre {
   text-align: center;
   color: white;
-  z-index: 1000;
+  z-index: 10;
   font-size: 2.4rem;
   font-weight: 700;
 }
